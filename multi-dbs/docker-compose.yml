@@ -15,7 +15,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-    - postgres-compose-network
+    - multidb-compose-network
 
   postgres:
     image: postgres
@@ -27,7 +27,7 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - postgres-compose-network
+      - multidb-compose-network
   
   mongodb:
     image: mongodb
@@ -37,6 +37,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: changeme
+    networks:
+    - multidb-compose-network
 
 
   adminer:
@@ -45,8 +47,8 @@ services:
     ports: 
       - "8080:8080"
     networks:
-      - postgres-compose-network
+      - multidb-compose-network
   
 networks:
-  postgres-compose-network:
+  multidb-compose-network:
     driver: bridge
