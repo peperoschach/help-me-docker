@@ -8,7 +8,7 @@ Sinta-se a vontade para usar baixar os arquivos. Assim que eu puder eu vou ir at
 ### Montado seu container  
 
 Certifique-se que está com o __Docker__ instalado em sua máquina.
-Se não estiver você pode fazer o download [aqui](https://www.docker.com/), escolha o seu sistema operacional e efetue o download, após isso faça a intalação.
+Se não estiver você pode clicar [aqui](https://www.docker.com/), escolha o seu sistema operacional e efetue o download, após isso faça a instalação.
   
 Escolha o container que vai utilizar, coloque o arquivo *.yml na raiz do seu projeto, após isso execute em seu terminal o comando:    
 
