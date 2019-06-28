@@ -21,7 +21,7 @@ services:
     volumes:
       - ./www:/var/www/html
     ports:
-      - "8080:80"
+      - "8080:8080"
       - "443:443"
     restart: always
     environment:
@@ -35,7 +35,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - 88:80
+      - 88:88
     environment:
       PMA_HOST: wordpress_db:3306
       MYSQL_ROOT_PASSWORD: myrootpass
