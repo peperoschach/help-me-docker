@@ -12,6 +12,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: changeme
+    networks:
+      - mongo-compose-network
 
 
   adminer:
@@ -20,8 +22,8 @@ services:
     ports: 
       - "8080:8080"
     networks:
-      - postgres-compose-network
+      - mongo-compose-network
   
 networks:
-  postgres-compose-network:
+  mongo-compose-network:
     driver: bridge

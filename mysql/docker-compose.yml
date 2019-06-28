@@ -15,7 +15,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-    - postgres-compose-network
+    - mysqldb-compose-network
 
   adminer:
     image: adminer
@@ -23,8 +23,8 @@ services:
     ports: 
       - "8080:8080"
     networks:
-      - postgres-compose-network
+      - mysqldb-compose-network
   
 networks:
-  postgres-compose-network:
+  mysqldb-compose-network:
     driver: bridge
