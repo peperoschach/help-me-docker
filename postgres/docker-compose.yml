@@ -1,0 +1,29 @@
+#run docker-compose up -d
+# Docker compose Postgres
+version: '3.1'
+
+services: 
+
+  postgres:
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRES_USER: pepedev
+      POSTGRES_PASSWORD: minhasenhasecreta
+      POSTGRES_DB: teste
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres-compose-network
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports: 
+      - "8080:8080"
+    networks:
+      - postgres-compose-network
+  
+networks:
+  postgres-compose-network:
+    driver: bridge

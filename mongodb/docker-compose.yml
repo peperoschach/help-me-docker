@@ -1,0 +1,27 @@
+#run docker-compose up -d
+# Docker compose multi db
+version: '3.1'
+
+services: 
+
+  mongodb:
+    image: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: changeme
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports: 
+      - "8080:8080"
+    networks:
+      - postgres-compose-network
+  
+networks:
+  postgres-compose-network:
+    driver: bridge
