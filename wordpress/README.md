@@ -1,3 +1,11 @@
+### Especificações    
+
+- PHP 7.2
+- Apache
+- Mysql 5.7
+- Wordpress latest version
+- PhpMyAdmin   
+  
 ### Rodando os containers
 
 1. Certifique-se que você tenha o docker instalado em sua máquina.
@@ -6,3 +14,4 @@
 4. No terminal vá até o diretório do seu projeto, execute o comando `docker-compose up -d`.
 5. Em um navegador digite __http://localhost:8080__
 6. Se tudo ocorreu bem deverá aparecer em seu navegador os steps para a instalação do wordpress.
+7. Em um navegador digite __http://localhost:88__ para acessar o PhpMyAdmin

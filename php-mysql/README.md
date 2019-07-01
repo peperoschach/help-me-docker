@@ -1,3 +1,9 @@
+### Especificações
+  
+- PHP 7.2  
+- Apache  
+- Mysql 5.7  
+
 ### Rodando os containers
 
 1. Certifique-se que você tenha o docker instalado em sua máquina.
